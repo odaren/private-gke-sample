@@ -9,12 +9,12 @@ cd kubernetes-engine-samples/hello-app
 ```
 3. Dockerイメージをビルド
 ```
-docker build -t ${REGION}-docker.pkg.dev/${PROJECT_ID}/{REPOSITORY_NAME}/hello-app:v1 .
+docker build -t ${REGION}-docker.pkg.dev/{PROJECT_ID}/{REPOSITORY_NAME}/hello-app:v1 .
 ```
 4. Dockerイメージを Artifact registryにpushする
 ```
 gcloud auth configure-docker {REGION}-docker.pkg.dev
-docker push {REGION}-docker.pkg.dev/${PROJECT_ID}/{REPOSITORY_NAME}/hello-app:v1
+docker push {REGION}-docker.pkg.dev/{PROJECT_ID}/{REPOSITORY_NAME}/hello-app:v1
 ```
 5. 限定公開のGKEクラスタを作成する
 6. アプリケーションをデプロイする
