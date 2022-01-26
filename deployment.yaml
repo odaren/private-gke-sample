@@ -13,5 +13,5 @@ spec:
         run: web
     spec:
       containers:
-      - image: asia-northeast1-docker.pkg.dev/プロジェクト名/リポジトリ名/hello-app:v1
+      - image: {REGION}.pkg.dev/{PROJECT_ID}/{REPOSITRY_NAME}/hello-app:v1
         imagePullPolicy: IfNotPresent
