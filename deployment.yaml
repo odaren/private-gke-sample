@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      run: web
+  template:
+    metadata:
+      labels:
+        run: web
+    spec:
+      containers:
+      - image: asia-northeast1-docker.pkg.dev/プロジェクト名/リポジトリ名/hello-app:v1
+        imagePullPolicy: IfNotPresent
