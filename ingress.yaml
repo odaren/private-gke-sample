@@ -2,8 +2,6 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: basic-ingress
-  annotations:
-    kubernetes.io/ingress.global-static-ip-name: "予約した外部IPアドレス"
 spec:
   defaultBackend:
     service:
