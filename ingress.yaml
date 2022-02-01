@@ -2,6 +2,9 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: basic-ingress
+  annotations:
+        kubernetes.io/ingress.global-static-ip-name: ingress-ip #静的IPアドレス
+        networking.gke.io/managed-certificates: managed-cert #SSL証明書
 spec:
   defaultBackend:
     service:
